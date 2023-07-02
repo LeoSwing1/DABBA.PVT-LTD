@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:dabba/pages/login_in_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -12,7 +13,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 2), () {
+    Timer(Duration(seconds: 15), () {
+      SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values); // Enable system UI overlays
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -20,6 +22,10 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
       );
     });
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []); // Disable system UI overlays
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent, // Set status bar color to transparent
+    ));
   }
 
   @override
@@ -36,20 +42,18 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
               ),
             ),
-            Opacity(
-              opacity: 0.4,
-              child: Container(
-                color: Colors.black,
-              ),
+            Container(
+              color: Colors.black.withOpacity(0.9),
             ),
             Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image(
+                children: [ Padding(
+                    padding: EdgeInsets.only(top: 200),
+                  child:Image(
                     image: AssetImage('assets/images/DABBA_MAIN_OFFICIAL_TP.png'),
                     width: 400,
-                  ),
+                  )),
                   SizedBox(height: 100),
                   Align(
                     alignment: Alignment.bottomCenter,
@@ -59,8 +63,9 @@ class _SplashScreenState extends State<SplashScreen> {
                     ),
                   ),
                   SizedBox(height: 15),
-                  Text('Loading...'),
-                ],
+                  Text('Loading...',
+                    style: TextStyle(color: Colors.white), // Set the text color to white
+               ) ],
               ),
             ),
           ],
