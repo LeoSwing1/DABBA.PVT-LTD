@@ -32,6 +32,10 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_spinkit: ^5.2.0
+  material_design_icons_flutter: 7.0.7296
+  google_sign_in: ^5.4.2
+  font_awesome_flutter: ^10.5.0
+  carousel_slider: ^4.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -64,10 +68,20 @@ flutter:
   # To add assets to your application, add an assets section, like this:
 
   assets:
-    - assets/images/logo-white-1-1.png
-    - assets/images/DABBA_OFFICIAL_LOGO.png
+    - assets/images/DABBA_MAIN_OFFICIAL_TP.png
+    - assets/images/DABBA_TEAM_OFFICIAL_TP_LOGO.png.png
+    - assets/images/dalrice.jpg
+    - assets/images/gujiya.jpg
+    - assets/images/kichadri.jpg
+    - assets/images/matarpaneer.jpg
+    - assets/images/sahipaneer.jpg
+    - assets/images/samosa.jpg
+    - assets/images/spiceswall.jpg
+    
 
+    
 
+  
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
