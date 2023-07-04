@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:dabba/pages/SignUpPage.dart';
-import 'package:dabba/pages/loading_home_splash.dart';
+import 'package:dabba/pages/splashes/loading_home_splash.dart';
 
 
 class LogInPage extends StatefulWidget {

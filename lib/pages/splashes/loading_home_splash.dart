@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:dabba/pages/main_home_page.dart';
+import 'package:dabba/pages/Bottom_navigator_pages/home_opt.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -16,7 +16,7 @@ class _LodingHomeSplashState extends State<LodingHomeSplash> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => MainHomePage(),
+          builder: (context) => HomeOption(),
         ),
       );
     });

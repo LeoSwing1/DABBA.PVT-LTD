@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login_in_page.dart';
-import 'package:dabba/pages/loading_home_splash.dart';
+import 'package:dabba/pages/splashes/loading_home_splash.dart';
 class SignUpPage extends StatefulWidget {
   @override
   _SignUpPageState createState() => _SignUpPageState();
