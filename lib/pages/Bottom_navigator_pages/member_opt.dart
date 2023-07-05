@@ -8,7 +8,7 @@ class MembershipOption extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Membership'),
-       backgroundColor: Color.fromARGB(255, 239, 103, 6),
+        backgroundColor: Color.fromARGB(255, 239, 103, 6),
       ),
       body: Center(
         child: Column(
@@ -30,6 +30,14 @@ class MembershipOption extends StatelessWidget {
             SizedBox(height: 32),
             ElevatedButton(
               child: Text('Join Now'),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(
+                  Color.fromARGB(255, 239, 103, 6),
+                ),
+                minimumSize: MaterialStateProperty.all(
+                  Size(double.infinity, 50),
+                ),
+              ),
               onPressed: () {
                 Navigator.pushNamed(context, '/membership_signup');
               },
@@ -37,8 +45,7 @@ class MembershipOption extends StatelessWidget {
           ],
         ),
       ),
-            bottomNavigationBar: BottomNavBarWidget(),
-
+      bottomNavigationBar: BottomNavBarWidget(),
     );
   }
 }

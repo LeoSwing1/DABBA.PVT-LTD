@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dabba/widgets/BottomNavBarWidget.dart';
+import 'Edit_profile.dart';
 
 class AccountOption extends StatelessWidget {
   @override
@@ -7,8 +8,7 @@ class AccountOption extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Account'),
-                backgroundColor: Color.fromARGB(255, 239, 103, 6),
-
+        backgroundColor: Color.fromARGB(255, 239, 103, 6),
       ),
       body: ListView(
         padding: EdgeInsets.all(16.0),
@@ -19,7 +19,9 @@ class AccountOption extends StatelessWidget {
               'Edit Profile',
               style: TextStyle(fontSize: 16.0),
             ),
-            onTap: () {
+            onTap: () => {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => EditProfileScreen())),
             },
           ),
           ListTile(
@@ -28,8 +30,7 @@ class AccountOption extends StatelessWidget {
               'Edit Addresses',
               style: TextStyle(fontSize: 16.0),
             ),
-            onTap: () {
-            },
+            onTap: () {},
           ),
           ListTile(
             leading: Icon(Icons.save),
@@ -37,8 +38,7 @@ class AccountOption extends StatelessWidget {
               'Saved Addresses',
               style: TextStyle(fontSize: 16.0),
             ),
-            onTap: () {
-            },
+            onTap: () {},
           ),
           ListTile(
             leading: Icon(Icons.mail),
@@ -46,8 +46,7 @@ class AccountOption extends StatelessWidget {
               'Contact Us',
               style: TextStyle(fontSize: 16.0),
             ),
-            onTap: () {
-            },
+            onTap: () {},
           ),
           ListTile(
             leading: Icon(Icons.history),
@@ -55,9 +54,9 @@ class AccountOption extends StatelessWidget {
               'Previous Orders',
               style: TextStyle(fontSize: 16.0),
             ),
-            onTap: () {
-            },
+            onTap: () {},
           ),
+          
         ],
       ),
       bottomNavigationBar: BottomNavBarWidget(),
